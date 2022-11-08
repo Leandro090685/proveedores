@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center">Proveedores</h2>
+    <table>
+        <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Telefono</th>
+              <th>Tipo proveedor</th>
+              <th>Activo</th>
+              <th>Creado</th>
+              <th>Actualizado</th>
+            </tr>
+        </thead>
+          <tbody>
+            {% for prov in prov %}
+            <tr>
+                <td>{{prov.id}}</td>
+                <td>{{prov.name}}</td>
+                <td>{{prov.email}}</td>
+                <td>{{prov.phone}}</td>
+                <td>{{prov.type_proveedor}}</td>
+                <td>{{prov.active}}</td>
+                <td>{{prov.created_at}}</td>
+                <td>{{prov.update_at}}</td>
+            </tr>
+            {%endfor%}
+            
+          </tbody>
+    </table>
+      
+</body>
+</html>
